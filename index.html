@@ -8,13 +8,48 @@
       .p1 {
   font-family: Arial, Helvetica, sans-serif;
 }
+.parallax {
+  /* The image used */
+  background-image: url("img_parallax.jpg");
+
+  /* Set a specific height */
+  min-height: 700px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+div#colorbox {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alter
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  33.333333333%  {background-color:yellow; left:50px; top:0px;}
+  66.666666666%  {background-color:blue; left:25px; top:50px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
     </style>
   </head>
 
   <body background="Backgroung for BBA google drove.jpg">
-    <h1 class="p1">Welcome to google drove!</h1>
+  
+          <div class="parallax"></div>
+
+<div style="height:3000px;background-color:black;">
+  <h1 class="p1">Welcome to google drove!</h1>
+
     <h2  class="p1">
-      <marquee>The center of Big Brain Academy comunications!</marquee>
+      <marquee width="20%">The center of Big Brain Academy comunications!</marquee>
     </h2>
     <h2 class="p1"><span>Newbies</span></h3>
     <p class="p1">To activate your BBA membership: google drove section, please submit this 6 letter code: NOTFUNCTIONALYET:PLEASE WAIT.
@@ -22,5 +57,9 @@
     <h2 class="p1"><span>Senior members</span></h3>
     <h3 class="p1"><span>News</span></h2>
     <h3 class="p1"><span>Anoucements</span></h2>
+    <div id="colorbox"></div>
+</div>
+
+
    </body>
 </html>
